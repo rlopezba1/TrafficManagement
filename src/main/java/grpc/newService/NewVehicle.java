@@ -20,19 +20,17 @@ public class NewVehicle {
 		ManagedChannel newChannel = ManagedChannelBuilder.forAddress(host, port).usePlaintext().build();
 		
 		// now build our message
-		speedDouble sDouble = speedDouble.newBuilder().setSpeed(23.9).build();
+		speedDouble sDouble = speedDouble.newBuilder().setSpeed(87.00).build();
 		
 		//create a stub
 		//the stub is a local representation of our remote object or service
 		
 		speedControlServiceBlockingStub bstub = speedControlServiceGrpc.newBlockingStub(newChannel);
 		
-		// 
-				
-		speedDouble response = bstub.oneVehicle(sDouble);
+		speedDouble response = bstub.getOneVehicle(sDouble);
 		
 		//printout the response
-		System.out.println(response.getSpeed());
+		System.out.println("(This is the client) The speed must be: " + response.getSpeed());
 		
 		newChannel.shutdown().awaitTermination(5, TimeUnit.SECONDS );
 	}

@@ -29,10 +29,10 @@ public final class SpeedControlServiceImp {
   static {
     java.lang.String[] descriptorData = {
       "\n\027trafficManagement.proto\"\034\n\013speedDouble" +
-      "\022\r\n\005speed\030\001 \001(\0012A\n\023speedControlService\022*" +
-      "\n\noneVehicle\022\014.speedDouble\032\014.speedDouble" +
-      "\"\000B+\n\017grpc.newServiceB\026SpeedControlServi" +
-      "ceImpP\001b\006proto3"
+      "\022\r\n\005speed\030\001 \001(\0012D\n\023speedControlService\022-" +
+      "\n\rGetOneVehicle\022\014.speedDouble\032\014.speedDou" +
+      "ble\"\000B+\n\017grpc.newServiceB\026SpeedControlSe" +
+      "rviceImpP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

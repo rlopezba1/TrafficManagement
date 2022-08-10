@@ -36,13 +36,13 @@ public class TrafficServer {
 				
 				// Find out what was sent by the client
 				double speed = request.getSpeed();
-				System.out.println("Speed is : " + speed);
+				System.out.println("Actual Speed is : " + speed);
 				
 				// now build our response
 				// Step one create a builder
 				speedDouble.Builder responseBuilder = speedDouble.newBuilder();
 				
-				responseBuilder.setSpeed(speed);
+				responseBuilder.setSpeed(120.00);
 				
 				responseObserver.onNext(responseBuilder.build());
 				responseObserver.onCompleted();	

@@ -28,35 +28,35 @@ public final class speedControlServiceGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<grpc.newService.speedDouble,
-      grpc.newService.speedDouble> getOneVehicleMethod;
+      grpc.newService.speedDouble> getGetOneVehicleMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "oneVehicle",
+      fullMethodName = SERVICE_NAME + '/' + "GetOneVehicle",
       requestType = grpc.newService.speedDouble.class,
       responseType = grpc.newService.speedDouble.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<grpc.newService.speedDouble,
-      grpc.newService.speedDouble> getOneVehicleMethod() {
-    io.grpc.MethodDescriptor<grpc.newService.speedDouble, grpc.newService.speedDouble> getOneVehicleMethod;
-    if ((getOneVehicleMethod = speedControlServiceGrpc.getOneVehicleMethod) == null) {
+      grpc.newService.speedDouble> getGetOneVehicleMethod() {
+    io.grpc.MethodDescriptor<grpc.newService.speedDouble, grpc.newService.speedDouble> getGetOneVehicleMethod;
+    if ((getGetOneVehicleMethod = speedControlServiceGrpc.getGetOneVehicleMethod) == null) {
       synchronized (speedControlServiceGrpc.class) {
-        if ((getOneVehicleMethod = speedControlServiceGrpc.getOneVehicleMethod) == null) {
-          speedControlServiceGrpc.getOneVehicleMethod = getOneVehicleMethod = 
+        if ((getGetOneVehicleMethod = speedControlServiceGrpc.getGetOneVehicleMethod) == null) {
+          speedControlServiceGrpc.getGetOneVehicleMethod = getGetOneVehicleMethod = 
               io.grpc.MethodDescriptor.<grpc.newService.speedDouble, grpc.newService.speedDouble>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
-                  "speedControlService", "oneVehicle"))
+                  "speedControlService", "GetOneVehicle"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   grpc.newService.speedDouble.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   grpc.newService.speedDouble.getDefaultInstance()))
-                  .setSchemaDescriptor(new speedControlServiceMethodDescriptorSupplier("oneVehicle"))
+                  .setSchemaDescriptor(new speedControlServiceMethodDescriptorSupplier("GetOneVehicle"))
                   .build();
           }
         }
      }
-     return getOneVehicleMethod;
+     return getGetOneVehicleMethod;
   }
 
   /**
@@ -91,20 +91,20 @@ public final class speedControlServiceGrpc {
      *unary
      * </pre>
      */
-    public void oneVehicle(grpc.newService.speedDouble request,
+    public void getOneVehicle(grpc.newService.speedDouble request,
         io.grpc.stub.StreamObserver<grpc.newService.speedDouble> responseObserver) {
-      asyncUnimplementedUnaryCall(getOneVehicleMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetOneVehicleMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getOneVehicleMethod(),
+            getGetOneVehicleMethod(),
             asyncUnaryCall(
               new MethodHandlers<
                 grpc.newService.speedDouble,
                 grpc.newService.speedDouble>(
-                  this, METHODID_ONE_VEHICLE)))
+                  this, METHODID_GET_ONE_VEHICLE)))
           .build();
     }
   }
@@ -132,10 +132,10 @@ public final class speedControlServiceGrpc {
      *unary
      * </pre>
      */
-    public void oneVehicle(grpc.newService.speedDouble request,
+    public void getOneVehicle(grpc.newService.speedDouble request,
         io.grpc.stub.StreamObserver<grpc.newService.speedDouble> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getOneVehicleMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOneVehicleMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -162,9 +162,9 @@ public final class speedControlServiceGrpc {
      *unary
      * </pre>
      */
-    public grpc.newService.speedDouble oneVehicle(grpc.newService.speedDouble request) {
+    public grpc.newService.speedDouble getOneVehicle(grpc.newService.speedDouble request) {
       return blockingUnaryCall(
-          getChannel(), getOneVehicleMethod(), getCallOptions(), request);
+          getChannel(), getGetOneVehicleMethod(), getCallOptions(), request);
     }
   }
 
@@ -191,14 +191,14 @@ public final class speedControlServiceGrpc {
      *unary
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<grpc.newService.speedDouble> oneVehicle(
+    public com.google.common.util.concurrent.ListenableFuture<grpc.newService.speedDouble> getOneVehicle(
         grpc.newService.speedDouble request) {
       return futureUnaryCall(
-          getChannel().newCall(getOneVehicleMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetOneVehicleMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_ONE_VEHICLE = 0;
+  private static final int METHODID_GET_ONE_VEHICLE = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -217,8 +217,8 @@ public final class speedControlServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ONE_VEHICLE:
-          serviceImpl.oneVehicle((grpc.newService.speedDouble) request,
+        case METHODID_GET_ONE_VEHICLE:
+          serviceImpl.getOneVehicle((grpc.newService.speedDouble) request,
               (io.grpc.stub.StreamObserver<grpc.newService.speedDouble>) responseObserver);
           break;
         default:
@@ -282,7 +282,7 @@ public final class speedControlServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new speedControlServiceFileDescriptorSupplier())
-              .addMethod(getOneVehicleMethod())
+              .addMethod(getGetOneVehicleMethod())
               .build();
         }
       }
