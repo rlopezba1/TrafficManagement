@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_package = "grpc.service4";
+option java_multiple_files = true;
+option java_outer_classname = "Service4Impl";
+
+
+service Service4{
+
+	rpc SendClient_ServerStreaming(stream infoString) returns (stream infoString){}
+
+}
+
+message infoString{
+	// 1 is a tag, not a content of the variable
+	string firstInfoString = 1;
+}
