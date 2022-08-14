@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "grpc.service6";
+option java_outer_classname = "Service6Impl";
+
+service Service6{
+
+	rpc GetfirsttString(containsString) returns (containsString){}
+
+}
+
+message containsString{
+	string firststring = 1;
+}
